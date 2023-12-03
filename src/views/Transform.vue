@@ -1,7 +1,53 @@
 <template>
   <Navbar :transformTitle="title" />
   <div class="transform-container">
-    <div class="transform-settings"></div>
+    <div class="transform-settings">
+      <h2 class="settings-title">CSS transform</h2>
+      <div class="generator-inputs">
+        <div class="inputItem">
+          <div class="inputItem-row">
+            <label>scale:</label>
+            <span class="inputItem-num">{{ scale }}</span>
+          </div>
+          <input type="range" min="0" max="2" step="0.1" v-model="scale" />
+        </div>
+        <div class="inputItem">
+          <div class="inputItem-row">
+            <label>rotate:</label>
+            <span class="inputItem-num">{{ rotate }}</span>
+          </div>
+          <input type="range" min="0" max="360" v-model="rotate" />
+        </div>
+        <div class="inputItem">
+          <div class="inputItem-row">
+            <label>translate X:</label>
+            <span class="inputItem-num">{{ translateX }}</span>
+          </div>
+          <input type="range" min="-100" max="100" v-model="translateX" />
+        </div>
+        <div class="inputItem">
+          <div class="inputItem-row">
+            <label>translate Y:</label>
+            <span class="inputItem-num">{{ translateY }}</span>
+          </div>
+          <input type="range" min="-100" max="100" v-model="translateY" />
+        </div>
+        <div class="inputItem">
+          <div class="inputItem-row">
+            <label>skew X:</label>
+            <span class="inputItem-num">{{ skewX }}</span>
+          </div>
+          <input type="range" min="-100" max="100" v-model="skewX" />
+        </div>
+        <div class="inputItem">
+          <div class="inputItem-row">
+            <label>skew Y:</label>
+            <span class="inputItem-num">{{ skewY }}</span>
+          </div>
+          <input type="range" min="-100" max="100" v-model="skewY" />
+        </div>
+      </div>
+    </div>
     <div class="transform-result"></div>
     <div class="transform-code"></div>
   </div>
@@ -15,9 +61,21 @@ export default {
   components: { Navbar },
   setup() {
     const title = ref("transform");
+    const scale = ref(1);
+    const rotate = ref(0);
+    const translateX = ref(0);
+    const translateY = ref(0);
+    const skewX = ref(0);
+    const skewY = ref(0);
 
     return {
       title,
+      scale,
+      rotate,
+      translateX,
+      translateY,
+      skewX,
+      skewY,
     };
   },
 };

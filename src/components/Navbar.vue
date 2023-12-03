@@ -4,7 +4,14 @@
     <div @click="openNavigation" class="navigation-bar">
       <span ref="bar"></span>
     </div>
-    <div :class="{ open: isOpen }" class="navigation-open"></div>
+    <div :class="{ open: isOpen }" class="navigation-open">
+      <ul class="navigation-open__container">
+        <li><a href="#" class="navigation-open__btn active">Transform</a></li>
+        <li><a href="#" class="navigation-open__btn">Box shadow</a></li>
+        <li><a href="#" class="navigation-open__btn">Border radius</a></li>
+        <li><a href="#" class="navigation-open__btn">Gradient</a></li>
+      </ul>
+    </div>
   </nav>
   <section class="section-content">
     <h1 class="section-title">
@@ -146,5 +153,38 @@ export default {
 
 .close::after {
   opacity: 0;
+}
+
+.navigation-open__container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 200px;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.navigation-open__container li {
+  width: 46%;
+}
+
+.navigation-open__btn {
+  width: 100%;
+  height: 50px;
+  border: 2px solid rgb(86, 171, 86);
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navigation-open__btn.active {
+  background-color: rgb(86, 171, 86);
+  color: #fff;
 }
 </style>
