@@ -48,8 +48,47 @@
         </div>
       </div>
     </div>
-    <div class="transform-result"></div>
-    <div class="transform-code"></div>
+    <div class="transform-result">
+      <div
+        :style="{
+          transform: `scale(${scale}) rotate(${rotate}deg) translateX(${translateX}px) translateY(${translateY}px) skewX(${skewX}deg) skewY(${skewY}deg)`,
+        }"
+        class="square"
+      ></div>
+    </div>
+    <div class="transform-code">
+      <div class="code-box">
+        <div class="code-title">CSS code</div>
+        <div class="copy-code">Copy</div>
+      </div>
+      <div class="code">
+        <p>
+          -webkit-transform: scale({{ scale }}) rotate({{ rotate }}deg)
+          translate({{ translateX }}px, {{ translateY }}px) skew({{ skewX }}deg,
+          {{ skewY }}deg);
+        </p>
+        <p>
+          -moz-transform: scale({{ scale }}) rotate({{ rotate }}deg)
+          translate({{ translateX }}px, {{ translateY }}px) skew({{ skewX }}deg,
+          {{ skewY }}deg);
+        </p>
+        <p>
+          -ms-transform: scale({{ scale }}) rotate({{ rotate }}deg) translate({{
+            translateX
+          }}px, {{ translateY }}px) skew({{ skewX }}deg, {{ skewY }}deg);
+        </p>
+        <p>
+          -o-transform: scale({{ scale }}) rotate({{ rotate }}deg) translate({{
+            translateX
+          }}px, {{ translateY }}px) skew({{ skewX }}deg, {{ skewY }}deg);
+        </p>
+        <p>
+          transform: scale({{ scale }}) rotate({{ rotate }}deg) translate({{
+            translateX
+          }}px, {{ translateY }}px) skew({{ skewX }}deg, {{ skewY }}deg);
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
