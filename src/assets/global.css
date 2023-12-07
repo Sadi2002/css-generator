@@ -155,3 +155,16 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@media (768px <= width) {
+  .transform-row {
+    display: flex;
+    gap: 20px;
+  }
+  .transform-settings {
+    width: 40%;
+  }
+  .transform-result {
+    width: 60%;
+  }
+}

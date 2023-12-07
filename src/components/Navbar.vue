@@ -69,7 +69,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 20px 10px;
-  z-index: 9;
+  z-index: 10;
 }
 
 .navigation-bar span {
@@ -129,6 +129,7 @@ export default {
 .navigation-open.open {
   opacity: 1;
   visibility: visible;
+  z-index: 9;
 }
 
 .close {
