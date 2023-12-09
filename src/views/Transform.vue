@@ -60,7 +60,7 @@
     </div>
     <div class="transform-code">
       <div class="code-box">
-        <div class="code-title">CSS code:</div>
+        <div class="code-title">CSS code</div>
         <div class="copy-code">
           <div v-if="isChecking" @click="copyCode" class="copy">Copy</div>
           <div v-else class="copy-check"><i class="fas fa-check"></i></div>
